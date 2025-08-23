@@ -1,27 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSC Motion</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #0077ff;
-        }
-        p {
-            font-size: 18px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSC Motion - Soluciones Online</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0404e2;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #b0b0b0;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #0404e2;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service h3 {
+      color: #0404e2;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #0404e2;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .social a:hover {
+      color: #b0b0b0;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenido a <strong>SSC Motion 🚀</strong></h1>
-    <p>Tu agencia de soluciones online está en construcción, pero ya estamos en vivo.</p>
+  <header>
+    <h1>SSC Motion</h1>
+    <p>Solve Solution Center - Soluciones Online Inteligentes</p>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Edición de Video Profesional</h3>
+        <p>Producción y postproducción audiovisual para transmitir tu mensaje con impacto.</p>
+      </div>
+      <div class="service">
+        <h3>Animaciones Dinámicas</h3>
+        <p>Ideas convertidas en movimiento para destacar tu marca.</p>
+      </div>
+      <div class="service">
+        <h3>Diseño para Redes Sociales</h3>
+        <p>Contenido estratégico que impulsa interacción y crecimiento.</p>
+      </div>
+      <div class="service">
+        <h3>Presentaciones de Negocio</h3>
+        <p>Formatos visuales que inspiran y persuaden a tu audiencia.</p>
+      </div>
+      <div class="service">
+        <h3>Desarrollo Full-Stack</h3>
+        <p>Aplicaciones web robustas con tecnologías modernas.</p>
+      </div>
+      <div class="service">
+        <h3>Embudo de Ventas</h3>
+        <p>Estrategias digitales que convierten prospectos en clientes.</p>
+      </div>
+      <div class="service">
+        <h3>Marketing Digital</h3>
+        <p>Campañas estratégicas con ROI medible.</p>
+      </div>
+      <div class="service">
+        <h3>Filmmaking</h3>
+        <p>Producción audiovisual con calidad cinematográfica.</p>
+      </div>
+      <div class="service">
+        <h3>Landing Pages</h3>
+        <p>Diseños optimizados para maximizar conversiones.</p>
+      </div>
+      <div class="service">
+        <h3>Sistemas a Medida</h3>
+        <p>Software personalizado según las necesidades de tu negocio.</p>
+      </div>
+      <div class="service">
+        <h3>IA y Automatizaciones</h3>
+        <p>Soluciones inteligentes para optimizar procesos.</p>
+      </div>
+      <div class="service">
+        <h3>Agentes de IA</h3>
+        <p>Bots en WhatsApp, Telegram y más para potenciar la atención al cliente.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <h2>Contáctanos</h2>
+    <div class="social">
+      <a href="mailto:juancmartinezs09@gmail.com">📧 Correo</a>
+      <a href="https://wa.me/+50763454727" target="_blank">💬 WhatsApp</a>
+      <a href="https://juancarlosms" target="_blank">📷 Instagram</a>
+    </div>
+    <p style="margin-top: 15px; font-size: 0.9rem;">© 2025 SSC Motion - Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
