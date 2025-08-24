@@ -26,6 +26,34 @@
       color: var(--blanco);
       padding: 2.5rem 0 2.5rem 0;
       text-align: center;
+      position: relative;
+    }
+    .header-bar {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 1.3em;
+    }
+    .logo-img-container {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      margin-right: 1.1em;
+    }
+    .logo-img {
+      height: 64px;
+      width: auto;
+      display: block;
+      background: transparent;
+      border-radius: 10px;
+    }
+    .logo-text-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
     }
     .logo {
       font-size: 2.3rem;
@@ -238,19 +266,36 @@
       border-top: 1px solid var(--gris-londres);
     }
     @media (max-width: 800px) {
+      .header-bar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6em;
+      }
       .hero, .about-section {
         flex-direction: column;
       }
       .hero-media, .about-media {
         margin-top: 1.5em;
       }
+      nav {
+        margin-top: 0.7em;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">SSC MOTION</div>
-    <div class="sub">Solve Solution Center</div>
+    <div class="header-bar">
+      <div class="logo-img-container">
+        <!-- Logo: image1 -->
+        <img src="logo-ssc.png" alt="SSC MOTION logo" class="logo-img">
+      </div>
+      <div class="logo-text-block">
+        <div class="logo">SSC MOTION</div>
+        <div class="sub">Solve Solution Center</div>
+      </div>
+    </div>
     <nav>
       <a href="#servicios">Servicios</a>
       <a href="#sobre">Sobre Nosotros</a>
