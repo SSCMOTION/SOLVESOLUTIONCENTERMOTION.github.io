@@ -2,173 +2,371 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SSC Motion - Soluciones Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSC MOTION | Solve Solution Center</title>
+  <meta name="description" content="Soluciones digitales creativas y tecnológicas: video, diseño, desarrollo, IA, marketing y más.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --azul: #0404e2;
+      --blanco: #fff;
+      --gris-londres: #e4e6eb;
+      --negro: #1a1a1a;
+      --gris-texto: #61677c;
+    }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--blanco);
+      color: var(--negro);
+      min-height: 100vh;
     }
-
     header {
-      background: #0404e2;
-      color: #fff;
-      padding: 30px 20px;
+      background: var(--azul);
+      color: var(--blanco);
+      padding: 2.5rem 0 2.5rem 0;
       text-align: center;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .logo {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 0.1em;
     }
-
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #b0b0b0;
-    }
-
-    nav {
-      margin-top: 20px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      color: #0404e2;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .service {
-      background: #f8f8f8;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-    }
-
-    .service h3 {
-      color: #0404e2;
-      margin-bottom: 15px;
-    }
-
-    footer {
-      background: #0404e2;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .social a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: white;
+    .sub {
       font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: var(--gris-londres);
+      margin-bottom: 0.8em;
     }
-
-    .social a:hover {
-      color: #b0b0b0;
+    nav {
+      margin-top: 1.2em;
+    }
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      margin: 0 1.2em;
+      font-weight: 500;
+      font-size: 1.05em;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5em 1.3em;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2em;
+      margin-bottom: 3em;
+      justify-content: center;
+    }
+    .hero-text {
+      flex: 1 1 350px;
+    }
+    .hero-title {
+      font-size: 2.2em;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      color: var(--azul);
+    }
+    .hero-desc {
+      font-size: 1.23em;
+      color: var(--gris-texto);
+      margin-bottom: 1.5em;
+    }
+    .cta-btn {
+      background: var(--azul);
+      color: var(--blanco);
+      padding: 0.85em 2em;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.07em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(4,4,226,0.05);
+    }
+    .cta-btn:hover {
+      background: #2525ee;
+    }
+    .hero-media {
+      flex: 1 1 340px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-media video, .hero-media img {
+      width: 340px;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 4px 24px rgba(4,4,226,0.15);
+      background: var(--gris-londres);
+    }
+    .services-section {
+      background: var(--gris-londres);
+      border-radius: 20px;
+      padding: 2.7em 1em 2.5em 1em;
+      margin-bottom: 3em;
+      box-shadow: 0 2px 12px rgba(4,4,226,0.03);
+    }
+    .services-title {
+      text-align: center;
+      font-size: 1.6em;
+      font-weight: 700;
+      margin-bottom: 1.2em;
+      color: var(--azul);
+    }
+    .services-list {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .service {
+      background: var(--blanco);
+      border-radius: 16px;
+      padding: 2em 1.2em;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .service-title {
+      color: var(--azul);
+      font-weight: 700;
+      font-size: 1.12em;
+      margin-bottom: 0.7em;
+    }
+    .service-desc {
+      color: var(--gris-texto);
+      font-size: 1em;
+    }
+    .about-section {
+      margin-bottom: 3em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5em;
+      justify-content: center;
+    }
+    .about-content {
+      flex: 1 1 340px;
+    }
+    .about-title {
+      color: var(--azul);
+      font-size: 1.4em;
+      font-weight: 700;
+      margin-bottom: 0.7em;
+    }
+    .about-desc {
+      color: var(--gris-texto);
+      font-size: 1.08em;
+      line-height: 1.7;
+    }
+    .about-media {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .about-media img {
+      width: 300px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 2px 16px rgba(4,4,226,0.08);
+      background: var(--gris-londres);
+    }
+    .contact-section {
+      background: var(--azul);
+      color: var(--blanco);
+      border-radius: 20px;
+      text-align: center;
+      padding: 2.4em 1em 2.3em 1em;
+      margin-bottom: 3em;
+    }
+    .contact-title {
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-bottom: 1.1em;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4em;
+      justify-content: center;
+      margin-top: 1.1em;
+    }
+    .contact-link {
+      color: var(--azul);
+      background: var(--blanco);
+      border-radius: 30px;
+      padding: 0.7em 1.8em;
+      text-decoration: none;
+      font-size: 1.01em;
+      font-weight: 600;
+      transition: background 0.18s, color 0.18s;
+      box-shadow: 0 2px 8px rgba(4,4,226,0.06);
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+    }
+    .contact-link:hover {
+      background: var(--gris-londres);
+      color: #2525ee;
+    }
+    .contact-link svg {
+      width: 1.2em;
+      height: 1.2em;
+      vertical-align: middle;
+    }
+    footer {
+      background: var(--blanco);
+      color: var(--gris-texto);
+      text-align: center;
+      padding: 1.7em 0 1.2em 0;
+      font-size: 0.98em;
+      border-top: 1px solid var(--gris-londres);
+    }
+    @media (max-width: 800px) {
+      .hero, .about-section {
+        flex-direction: column;
+      }
+      .hero-media, .about-media {
+        margin-top: 1.5em;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>SSC Motion</h1>
-    <p>Solve Solution Center - Soluciones Online Inteligentes</p>
+    <div class="logo">SSC MOTION</div>
+    <div class="sub">Solve Solution Center</div>
     <nav>
       <a href="#servicios">Servicios</a>
+      <a href="#sobre">Sobre Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <div class="hero-title">Soluciones Creativas y Tecnológicas para tu Negocio</div>
+        <div class="hero-desc">
+          Elevamos tu marca y optimizamos tus procesos con servicios de video, diseño, desarrollo web, inteligencia artificial y marketing digital. Minimalismo, innovación y resultados para empresas que piensan en grande.
+        </div>
+        <a href="#contacto" class="cta-btn">Solicita tu propuesta</a>
+      </div>
+      <div class="hero-media">
+        <!-- Video de ambiente laboral -->
+        <video src="videos/laboral.mp4" autoplay loop muted playsinline poster="images/laboral-poster.jpg"></video>
+      </div>
+    </section>
 
-  <section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Edición de Video Profesional</h3>
-        <p>Producción y postproducción audiovisual para transmitir tu mensaje con impacto.</p>
+    <!-- SERVICIOS -->
+    <section class="services-section" id="servicios">
+      <div class="services-title">Nuestros Servicios</div>
+      <div class="services-list">
+        <div class="service">
+          <div class="service-title">Edición de Video Profesional</div>
+          <div class="service-desc">Desde el concepto hasta la postproducción, creamos videos que capturan la atención y comunican tu mensaje de manera efectiva.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Animaciones Dinámicas</div>
+          <div class="service-desc">Damos vida a tus ideas con animaciones cautivadoras que elevan tu marca y mejoran la comunicación visual.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Diseño Estratégico para Redes Sociales</div>
+          <div class="service-desc">Desarrollamos presencia impactante en tus plataformas, generando engagement y crecimiento real.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Presentaciones de Negocio Impactantes</div>
+          <div class="service-desc">Creamos presentaciones que informan, inspiran y persuaden a tu audiencia.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Desarrollo Full-Stack con JavaScript</div>
+          <div class="service-desc">Soluciones web robustas y escalables, desde el frontend hasta el backend, adaptadas a tus necesidades.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Embudo de Ventas con Contenido</div>
+          <div class="service-desc">Diseñamos e implementamos embudos que convierten prospectos en clientes leales, impulsados por contenido de alto valor.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Marketing Digital Estratégico</div>
+          <div class="service-desc">Campañas de marketing que alcanzan tus objetivos y generan un retorno de inversión medible.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Filmmaking</div>
+          <div class="service-desc">Producimos contenido audiovisual de calidad cinematográfica para tus proyectos e ideas.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Landing Pages Optimizadas</div>
+          <div class="service-desc">Diseñamos páginas de destino que maximizan las conversiones y potencian tus campañas.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Sistemas a Medida</div>
+          <div class="service-desc">Desarrollamos software personalizado que se adapta perfectamente a las necesidades de tu empresa.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Implementación de IA y Automatizaciones</div>
+          <div class="service-desc">Integramos inteligencia artificial y automatización para optimizar procesos y aumentar la eficiencia.</div>
+        </div>
+        <div class="service">
+          <div class="service-title">Agentes de IA para Plataformas</div>
+          <div class="service-desc">Creamos agentes de inteligencia artificial para WhatsApp, Telegram y Mercado Libre, optimizando la interacción con tus clientes.</div>
+        </div>
       </div>
-      <div class="service">
-        <h3>Animaciones Dinámicas</h3>
-        <p>Ideas convertidas en movimiento para destacar tu marca.</p>
-      </div>
-      <div class="service">
-        <h3>Diseño para Redes Sociales</h3>
-        <p>Contenido estratégico que impulsa interacción y crecimiento.</p>
-      </div>
-      <div class="service">
-        <h3>Presentaciones de Negocio</h3>
-        <p>Formatos visuales que inspiran y persuaden a tu audiencia.</p>
-      </div>
-      <div class="service">
-        <h3>Desarrollo Full-Stack</h3>
-        <p>Aplicaciones web robustas con tecnologías modernas.</p>
-      </div>
-      <div class="service">
-        <h3>Embudo de Ventas</h3>
-        <p>Estrategias digitales que convierten prospectos en clientes.</p>
-      </div>
-      <div class="service">
-        <h3>Marketing Digital</h3>
-        <p>Campañas estratégicas con ROI medible.</p>
-      </div>
-      <div class="service">
-        <h3>Filmmaking</h3>
-        <p>Producción audiovisual con calidad cinematográfica.</p>
-      </div>
-      <div class="service">
-        <h3>Landing Pages</h3>
-        <p>Diseños optimizados para maximizar conversiones.</p>
-      </div>
-      <div class="service">
-        <h3>Sistemas a Medida</h3>
-        <p>Software personalizado según las necesidades de tu negocio.</p>
-      </div>
-      <div class="service">
-        <h3>IA y Automatizaciones</h3>
-        <p>Soluciones inteligentes para optimizar procesos.</p>
-      </div>
-      <div class="service">
-        <h3>Agentes de IA</h3>
-        <p>Bots en WhatsApp, Telegram y más para potenciar la atención al cliente.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer id="contacto">
-    <h2>Contáctanos</h2>
-    <div class="social">
-      <a href="mailto:juancmartinezs09@gmail.com">📧 Correo</a>
-      <a href="https://wa.me/+50763454727" target="_blank">💬 WhatsApp</a>
-      <a href="https://juancarlosms" target="_blank">📷 Instagram</a>
-    </div>
-    <p style="margin-top: 15px; font-size: 0.9rem;">© 2025 SSC Motion - Todos los derechos reservados.</p>
+    <!-- SOBRE NOSOTROS -->
+    <section class="about-section" id="sobre">
+      <div class="about-content">
+        <div class="about-title">Sobre SSC MOTION</div>
+        <div class="about-desc">
+          Somos una agencia boutique formada por especialistas apasionados en creatividad y tecnología. Nuestra misión es impulsar tu marca y tus procesos con soluciones digitales de alto impacto, adaptadas a la nueva era empresarial. Nos enfocamos en la calidad, la atención personalizada y el uso inteligente de herramientas modernas para que tu empresa crezca con seguridad y estilo.
+        </div>
+      </div>
+      <div class="about-media">
+        <!-- Imagen de personas trabajando -->
+        <img src="images/teamwork.jpg" alt="Equipo creativo en ambiente laboral">
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contacto">
+      <div class="contact-title">Hablemos de tu proyecto</div>
+      <div>¿Listo para transformar tu empresa? Escríbenos por el canal que prefieras:</div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:tuemail@ssc.com" target="_blank" rel="noopener">
+          <!-- icono correo -->
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2"/><polyline points="2,5 12,13 22,5"/></svg>
+          Correo
+        </a>
+        <a class="contact-link" href="https://wa.me/tu_numero_whatsapp" target="_blank" rel="noopener">
+          <!-- icono whatsapp -->
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.832 3 3 8.832 3 16c0 2.88.832 5.6 2.4 8L3 29l5.12-2.08C10.4 28.16 13.12 29 16 29c7.168 0 13-5.832 13-13S23.168 3 16 3zm0 23.2c-2.56 0-5.12-.8-7.168-2.24l-.512-.32-3.04 1.28.64-3.04-.384-.48C5.12 19.52 4.4 17.76 4.4 16c0-6.368 5.232-11.6 11.6-11.6 6.368 0 11.6 5.232 11.6 11.6 0 6.368-5.232 11.6-11.6 11.6zm6.08-8.16c-.32-.16-1.856-.928-2.144-1.04-.288-.096-.512-.16-.736.16-.224.32-.864 1.04-1.056 1.248-.192.224-.384.192-.704.064-.32-.128-1.344-.496-2.56-1.6-.944-.832-1.584-1.856-1.76-2.176-.192-.32-.016-.48.144-.64.16-.16.32-.384.48-.576.16-.192.224-.32.32-.544.096-.224.032-.416-.032-.576-.064-.16-.736-1.792-1.008-2.464-.272-.672-.544-.576-.736-.576-.192 0-.416-.032-.64-.032-.224 0-.576.064-.864.32-.288.256-1.12 1.088-1.12 2.656 0 1.568 1.152 3.088 1.312 3.296.16.224 2.272 3.52 5.504 4.48.768.224 1.344.352 1.792.448.736.16 1.408.128 1.92.08.576-.064 1.792-.736 2.048-1.456.256-.72.256-1.344.176-1.456-.08-.112-.288-.176-.608-.336z"/></svg>
+          WhatsApp
+        </a>
+        <a class="contact-link" href="https://instagram.com/tu_instagram" target="_blank" rel="noopener">
+          <!-- icono instagram -->
+          <svg viewBox="0 0 32 32" fill="currentColor"><circle cx="16" cy="16" r="6"/><rect x="4" y="4" width="24" height="24" rx="6"/><circle cx="24" cy="8" r="1.5"/></svg>
+          Instagram
+        </a>
+      </div>
+    </section>
+  </div>
+  <footer>
+    © 2025 SSC MOTION | Solve Solution Center. Todos los derechos reservados.
   </footer>
 </body>
 </html>
